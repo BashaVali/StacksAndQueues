@@ -43,9 +43,11 @@ namespace StackQueue
                         string flag1 = "Y";
                         while (flag1 == "Y" || flag1 == "y")
                         {
-                            Console.WriteLine("1.Enqueue");
+                            Console.WriteLine("**1.Enqueue Operation**");
+                            Console.WriteLine("**2.Dequeue Operation**");
                             Console.WriteLine("Enter the option");
                             int num1 = Convert.ToInt32(Console.ReadLine());
+                            //Creating object for dequeue class
                             Queue queue = new Queue();
                             switch (num1)
                             {
@@ -53,6 +55,13 @@ namespace StackQueue
                                     queue.Enqueue(56);
                                     queue.Enqueue(30);
                                     queue.Enqueue(70);
+                                    queue.Display();
+                                    break;
+                                case 2:
+                                    queue.Enqueue(56);
+                                    queue.Enqueue(30);
+                                    queue.Enqueue(70);
+                                    queue.Dequeue();
                                     queue.Display();
                                     break;
                                 default:
@@ -70,10 +79,7 @@ namespace StackQueue
                 Console.WriteLine("\nDo you want to continue?(Y/N)");
                 flag = Console.ReadLine();
             }
-            Console.ReadKey();
-
 
         }
     }
 }
-         

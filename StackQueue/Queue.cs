@@ -8,6 +8,7 @@ namespace StackQueue
 {
     public class Queue
     {
+
         Node head;
         public void Enqueue(int item)
         {
@@ -27,7 +28,18 @@ namespace StackQueue
             }
             Console.WriteLine("Inserted into queue : " + new_node.data);
         }
-
+        //delete the element in front end
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty");
+            }
+            Node temp = this.head;
+            this.head = this.head.next;
+            Console.WriteLine("\nItem deleted is {0}", temp.data);
+        }
+        //Displaying the nodes.
         public void Display()
         {
             Node temp = this.head;
@@ -43,7 +55,6 @@ namespace StackQueue
                 Console.Write(temp.data + " ");
                 temp = temp.next;
             }
-
         }
     }
 }
